@@ -141,6 +141,7 @@ Look for:
 - inconsistent validation
 - inconsistent test style
 - inconsistent accessibility handling
+- contract drift: stale supported contracts that still exist in code but no longer make product sense
 
 Questions:
 
@@ -161,6 +162,7 @@ Look for:
 - one-off implementations where shared primitives should exist
 - over-abstractions that are harder to use than duplication
 - wrappers around wrappers around wrappers
+- near-identical code that should be abstracted instead of copied again
 
 Questions:
 
@@ -183,6 +185,7 @@ Look for:
 - hard-to-follow control flow
 - business logic buried in UI/framework glue
 - cleverness over clarity
+- code living in the wrong place, like API calls inside components or persistence logic in presentation code
 
 Questions:
 
@@ -203,6 +206,7 @@ Look for:
 - shared modules depending on feature-specific code
 - absence of layering
 - abstractions that do not match domain concepts
+- code that belongs in a different layer, module, or ownership boundary
 
 Questions:
 
@@ -225,6 +229,7 @@ Look for:
 - config drift
 - implementation-detail tests
 - patterns that will become scary to touch soon
+- obsolete supported code paths kept alive long after the contract drifted away from them
 
 Questions:
 
